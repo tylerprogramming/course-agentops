@@ -1,0 +1,5 @@
+agentops
+openai
+python-dotenv
+pyautogen
+crewai
