@@ -1,5 +1,9 @@
 agentops
 openai
 python-dotenv
-pyautogen
+# 04_pyautogen.py uses the classic `import autogen` API. The `pyautogen`
+# package is now an empty proxy for autogen-agentchat 0.7, which has no
+# `autogen` module. The classic API ships as `autogen` (AG2 classic).
+# The docker extra lets the user proxy run generated code in Docker.
+autogen[openai,docker]>=0.14,<0.15
 crewai
