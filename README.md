@@ -108,6 +108,10 @@ Shows AgentOps integration with Microsoft AutoGen:
 - Conversation management
 - Code execution environment
 
+This file uses the classic `import autogen` API, which `requirements.txt` installs as the `autogen` package (0.14.x, AG2 classic). Don't `pip install pyautogen`: that name is now an empty proxy for AutoGen 0.7 (`autogen-agentchat`), which has no `autogen` module, so the import fails.
+
+The user proxy runs the code the assistant writes in Docker by default, so start Docker first. To run the code directly on your machine instead, set `AUTOGEN_USE_DOCKER=False` in your `.env`.
+
 ## 🎭 CrewAI Project (story_flow)
 
 The `story_flow` directory contains a complete CrewAI project that generates poems using AgentOps monitoring.
