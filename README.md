@@ -39,6 +39,8 @@ This repository contains a comprehensive course on **AgentOps** - an AI agent ob
    # OPENAI_API_KEY=your_openai_api_key
    ```
 
+The examples use `gpt-6-luna`. They were recorded with `gpt-4.1`, which OpenAI removes from the API on 2027-01-14 ([OpenAI deprecations](https://developers.openai.com/api/docs/deprecations)); `gpt-6-luna` is the listed replacement.
+
 ## 📁 Repository Structure
 
 ```
