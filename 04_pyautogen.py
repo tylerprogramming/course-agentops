@@ -12,7 +12,11 @@ agentops.init(api_key=os.getenv("AGENTOPS_API_KEY"))
 # Configure your AG2 agents
 config_list = [
     {
-        "model": "gpt-4.1",
+        # gpt-4.1 is removed from the API on 2027-01-14; gpt-6-luna is OpenAI's replacement.
+        # autogen 0.14 has no built-in price for gpt-6-luna, so give it one
+        # (USD per 1K input/output tokens) to keep the cost figures accurate.
+        "model": "gpt-6-luna",
+        "price": [0.0001, 0.0005],
         "api_key": os.getenv("OPENAI_API_KEY"),
     }
 ]

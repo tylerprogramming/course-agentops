@@ -19,7 +19,8 @@ class AssistantAgent:
     def answer_question(self, question):
         # This LLM call will be automatically tracked and associated with this agent
         response = self.client.responses.create(
-            model="gpt-4.1",
+            # gpt-4.1 is removed from the API on 2027-01-14; gpt-6-luna is OpenAI's replacement
+            model="gpt-6-luna",
             instructions="Talk like a pirate.",
             input=question,
         )
