@@ -18,7 +18,8 @@ class MyAgent:
     @operation
     def search(self, query):
         response = self.client.responses.create(
-            model="gpt-4.1",
+            # gpt-4.1 is removed from the API on 2027-01-14; gpt-6-luna is OpenAI's replacement
+            model="gpt-6-luna",
             instructions="Talk like a pirate.",
             input=query,
         )
